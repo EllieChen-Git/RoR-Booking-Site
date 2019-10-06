@@ -1,0 +1,14 @@
+<h1>Home Page</h1>
+
+    <% @bookings.each do |booking| %>
+        <h2>Name:</h2>
+        <p><%=booking["name"]%><p>
+        <h2>Date:</h2>
+        <p><%=booking["date"]%><p>
+        <h2>Time:</h2>
+        <p><%=booking["email"]%><p>
+    <% end %>
+
+<div>
+<%= link_to("Make a New Booking", new_booking_path) %>
+</div>

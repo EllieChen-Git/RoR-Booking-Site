@@ -1,11 +1,11 @@
 # README
 ---
 
-Work in progress: This is a services booking website.
+Work in progress: A booking website for my friend Ryan's small business.
 
 ---
 
-* Ruby version
+* Ruby version: 2.6.3
 
 * System dependencies
 

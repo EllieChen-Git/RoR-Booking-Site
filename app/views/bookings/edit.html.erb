@@ -1,0 +1,42 @@
+<h1>Edit a Booking</h1>
+
+<form action="<%= booking_path %>" method="POST">
+
+<input type="hidden" value="<%=form_authenticity_token%>" name="authenticity_token" />
+
+<input type="hidden" name="_method" value="patch" />
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="booking[name]" id="name" value="<%= @booking["name"]%>"/>
+    </div>
+
+    <div>
+        <label for="date">Preferred Date:</label>
+        <input type="date" name="booking[date]" id="date" value="<%= @booking["date"]%>"/>
+    </div>
+
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="booking[email]" id="email" value="<%= @booking["email"]%>"/>
+    </div>
+
+<%# 
+
+    <div>
+        <label for="time">Preferred Time:</label>
+        <input type="time" name="booking[time]" id="time"/>
+    </div>
+    
+    <div>
+        <p>Additional Request:</p>
+        <div><textarea for="comment"></textarea></div>
+    </div>
+%>
+
+    <div>
+        <input type="submit" value="Edit Your Booking" />
+    </div>
+
+</form>

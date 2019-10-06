@@ -1,0 +1,43 @@
+<h1>Create a New Booking</h1>
+
+<form action="<%= bookings_path %>" method="POST">
+<input type="hidden" value="<%=form_authenticity_token%>" name="authenticity_token" />
+
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" name="booking[name]" id="name" />
+    </div>
+
+    <div>
+        <label for="date">Preferred Date:</label>
+        <input type="date" name="booking[date]" id="date"/>
+    </div>
+
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="booking[email]" id="email"/>
+    </div>
+
+<%# 
+
+    <div>
+        <label for="time">Preferred Time:</label>
+        <input type="time" name="booking[time]" id="time"/>
+    </div>
+    
+    <div>
+        <p>Additional Request:</p>
+        <div><textarea for="comment"></textarea></div>
+    </div>
+%>
+
+    <div>
+        <input type="submit" value="Book Online" />
+    </div>
+
+</form>
+
+<div>
+<%= link_to("Back to Booking List", bookings_path) %>
+</div>
